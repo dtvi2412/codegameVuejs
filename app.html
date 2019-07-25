@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>App game</title>
+	<link rel="stylesheet" type="text/css" href="app.css">
+	<script type="text/javascript" src="vue.js"></script>
+	
+
+</head>
+<body>
+	<div id="app">
+		<section class="main-actor">
+			<div class="actor">
+				<h1>YOU</h1>
+				<img src="Baohong.jpg" style="height: 200px;width: 50%">
+				<div class="heathbar">
+					<div class="heathbar text-center" style="background-color: red;margin: 0;color: white;" 		:style="{width: playerHeath + '%' }">
+						{{ playerHeath }}
+					</div>
+				</div>
+			</div>
+			<div class="actor1">
+				<h1>MONSTER</h1>
+				<img src="yasua.jpg" style="height: 200px;width: 50%">
+				<div class="heathbar">
+					<div class="heathbar text-center" style="background-color: red;margin: 0;color: white;" 
+						:style="{width: monsterHeath + '%' }">
+						{{ monsterHeath }}
+						
+					</div>
+				</div>
+			</div>
+			<div class="clear"></div>			
+		</section>
+		<section class="batdaugame" v-if="!gameisStart">
+			<div class="start">
+				<button id="start-game" @click="startGame()">START NEW GAME</button>
+			</div>
+		</section>
+		<section  id="control" v-else="">
+			<div class="child-control">
+				<button id="attack" @click="attack">ATTACK</button>
+				<button id="special-attack" @click="specialAttack">SPECIAL ATTACK</button>
+				<button id="heal" @click="heal">HEAL</button>
+				<button id="give-up" @click="giveUp">GIVE UP</button>
+			</div>
+		</section>
+		<section class="noidung" v-if="turns.length > 0">
+			<div id="connoidung">
+				<ul>
+					<li v-for="turn in turns" :class="{'player':turn.isPlayer,'monster':!turn.isPlayer}">
+						{{ turn.textLog }}
+					</li>
+				</ul>
+			</div>
+		</section>
+	</div>
+	<script type="text/javascript" src="app.js"></script>
+</body>
+</html>

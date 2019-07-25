@@ -1,0 +1,87 @@
+#app{
+	width:100%;
+	height:100%;
+}
+.main-actor{
+	width:960px;
+	height: 200px;
+	/*overflow: auto;*/
+}
+.actor{
+	width: 400px;
+	height: 200px;
+	margin-bottom: 20px;
+	padding-bottom: 300px;
+	float:left;
+	margin-right:  100px;
+	
+}
+.actor img{
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+.actor1{
+	width: 400px;
+	height: 200px;
+	margin-bottom: 20px;
+	padding-bottom: 300px;
+	float:left;
+}
+.actor1 img{
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.clear{
+	clear: both;	
+}
+.heathbar{
+	width: 100%;
+	height: 40px;
+	background-color: gray;
+	margin:auto;
+	transition: width 500ms;
+}
+.start{
+	/*margin:0 50% 0 50%;*/
+
+}
+#control{
+	/*width:960px;
+	height:200px;*/
+}
+.child-control{
+/*	margin:0 50% 0 50%;
+	width:400px;
+	height:200px;*/
+
+}
+#start-game{
+	background-color: #03fcc2;
+}
+#attack{
+	background-color: #fc2803;
+}
+#special-attack{
+	background-color: #6ffc03;
+}
+#heal{
+	background-color: #03fcdb;
+}
+#give-up{
+	background-color: #ad03fc;
+}
+#connoidung ul .player{
+	color:blue;
+	background-color: #03fcc2
+}
+#connoidung ul .monster{
+	color:red;
+	background-color: #6ffc03;
+}
+.noidung{
+	width: 200px;
+	height: 200px;
+	margin-left: 500px;
+	margin-top: 200px;
+}
